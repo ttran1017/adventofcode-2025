@@ -8,7 +8,7 @@ def print_line(tracker, line):
             print("^", end="")
         elif tracker[i]:
             counter += int(tracker[i])
-            print(tracker[i], end="")
+            print("|", end="")
         else:
             print(".", end="")
     print(f" Count: {counter}")
