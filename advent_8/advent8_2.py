@@ -39,8 +39,7 @@ def add_to_group(weight):
     join_index = []
     for i, group in enumerate(groups):
         if weight[0] in group and weight[1] in group:
-            join_index.append(-1)
-            break
+            return
         
         elif weight[0] in group:
             join_index.append(i)
@@ -54,7 +53,6 @@ def add_to_group(weight):
 
     if not join_index:
         groups.append({weight[0], weight[1]})
-        return
             
     if len(join_index) > 1:
         groups[join_index[0]].update(groups[join_index[1]])
@@ -74,11 +72,7 @@ def main():
         
     calc_weights()
     connect_nodes()
-    print_answer()
-
-
-
-        
+    print_answer()    
 
 if __name__ == "__main__":
     main()
