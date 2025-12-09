@@ -1,6 +1,5 @@
 INPUT = "advent_7/input.txt"
 
-
 def print_line(tracker, line):
     counter = 0
     for i, char in enumerate(line):
